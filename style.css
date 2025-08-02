@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #ef9d71;
+}
+
+body[theme="dark"] {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body[theme="cyan"] {
+    background-color: #aedee0;
+    color: #000000;
+}
+
+body[theme="salmon"] {
+    background-color: salmon;
+    color: #000000;
+}
+
+body[theme="light"] {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body[theme="yellow"] {
+    background-color: #f5f19c;
+    color: #000000;
+}
