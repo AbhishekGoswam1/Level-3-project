@@ -1,34 +1,48 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --selection-bg: #ef9d71;
+    --dark: #121212;
+    --cyan: #aedee0;
+    --salmon: #ef9d71;
+    --light: #ffffff;
+    --yellow: #f5f19c;
+    --text-dark: #000000;
+    --text-light: #ffffff;
+}
+
 *::selection {
-    background-color: #ef9d71;
+    background-color: var(--selection-bg);
+    color: var(--text-light);
 }
 
 body[theme="dark"] {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: var(--dark);
+    color: var(--text-light);
 }
 
 body[theme="cyan"] {
-    background-color: #aedee0;
-    color: #000000;
+    background-color: var(--cyan);
+    color: var(--text-dark);
 }
 
 body[theme="salmon"] {
-    background-color: salmon;
-    color: #000000;
+    background-color: var(--salmon);
+    color: var(--text-dark);
 }
 
 body[theme="light"] {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--light);
+    color: var(--text-dark);
 }
 
 body[theme="yellow"] {
-    background-color: #f5f19c;
-    color: #000000;
+    background-color: var(--yellow);
+    color: var(--text-dark);
+}
+
+.machina {
+    font-family: 'PP Neue Machina Plain Light', sans-serif;
 }
