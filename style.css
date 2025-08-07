@@ -47,3 +47,27 @@ body[theme="yellow"] {
 .machina {
     font-family: 'PP Neue Machina Plain Light', sans-serif;
 }
+
+input[type="email"]{
+    background-color: var(--light);
+    padding: 1rem;
+    width: 100%;
+    color: var(--text-dark);
+    outline: none;
+}::placeholder {
+    color: #1e1e1e;
+}
+
+.footer-text h1{
+    padding: 0;
+    margin: 0;
+}
+
+.spaced-underline {
+  text-decoration: underline;
+  text-underline-offset: 5px; /* Adjust this value for desired spacing */
+}
+
+.icons i{
+    font-size: 1.3rem;
+}
