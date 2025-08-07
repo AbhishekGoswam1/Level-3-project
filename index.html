@@ -1,248 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation Project</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body theme="salmon">
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body theme="light">
     <div class="main w-full">
-        <div class="home w-full h-screen relative">
-            <div class="bottomtext z-[5] w-44 absolute bottom-[7%] left-[4%]">
-                <h4 class="text-sm font-semibold">We build big ideas. Software. Apps. Tools.</h4>
-                <h4 class="text-sm font-semibold">For real people. Real lives.</h4>
-            </div>
-            <!-- video div -->
-            <div class="hidden videodiv z-[3] w-full h-screen absolute top-0 left-0 overflow-hidden">
-                <video autoplay loop muted class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" 
-                src="https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/bBj1XfrSyi/1ENIoa5sjq"></video>
-            </div>
-            <!-- marquee div -->
-            <div class="marqueesdiv w-full h-screen relative overflow-hidden">
-                <div class="heading absolute top-[10%] left-1/2 -translate-x-1/2 w-68">
-                    <h1 class="text-2xl font-semibold">Crafting a new paradigm of healthcare, one that is</h1>
+      <!-- navbar -->
+      <div
+        class="navbar w-full fixed z-[50] top-0 flex justify-between items-center pt-10 px-12"
+      >
+        <div class="leftnav">
+          <h1 class="text-4xl font-bold">significo</h1>
+        </div>
+        <div
+          class="rightnav flex items-center gap-8 text-sm font-semibold tracking-wide"
+        >
+          <span><h3>Solutions</h3></span>
+          <span><h3>About</h3></span>
+          <span><h3>Insights</h3></span>
+          <span><h3>Team</h3></span>
+          <span><h3>Careers</h3></span>
+          <span
+            class="bg-[#f5f19c] py-2 px-3 rounded-sm whitespace-nowrap text-black"
+            ><h3>Contact Us</h3></span
+          >
+        </div>
+      </div>
+      <!-- hero section -->
+      <div class="home w-full h-screen relative mt-7">
+        <div class="bottomtext z-[5] w-40 absolute bottom-[10%] left-[4%]">
+          <h4 class="text-sm font-medium">
+            We build big ideas. Software. Apps. Tools.
+          </h4>
+          <h4 class="text-sm font-medium">For real people. Real lives.</h4>
+        </div>
+        <!-- video div -->
+        <div
+          class="hidden videodiv z-[3] w-full h-screen absolute top-0 left-0 overflow-hidden"
+        >
+          <video
+            autoplay
+            loop
+            muted
+            class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            src="https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/bBj1XfrSyi/1ENIoa5sjq"
+          ></video>
+        </div>
+        <!-- marquee div -->
+        <div class="marqueesdiv w-full h-screen relative overflow-hidden">
+          <div
+            class="heading absolute top-[10%] left-1/2 -translate-x-1/2 w-[20rem]"
+          >
+            <h1 class="text-[1.5rem] tracking-wide text-center">
+              Crafting a new paradigm of healthcare, one that is
+            </h1>
+          </div>
+          <!-- marquees -->
+          <div
+            class="absolute w-[90%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-3"
+          >
+            <div
+              class="row -translate-x-2/5 w-full flex items-center gap-10 whitespace-nowrap"
+            >
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">empathetic</h2>
+                <div
+                  class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png"
+                    alt="image"
+                  />
                 </div>
-                <!-- marquees -->
-                <div class="absolute w-[90%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-3 ">
-                    <div class="row -translate-x-2/5 w-full flex items-center gap-10 whitespace-nowrap">
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">empathetic</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">useful</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png" alt="">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">intuitive</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">elegant</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">inclusive</h2>
-                        </div>
-                    </div>
-                    <div class="row -translate-x-1/3 w-full flex items-center gap-10 whitespace-nowrap">
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">thoughtful</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">empathetic</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">elegant</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">bold</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png" alt="">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">inclusive</h2>
-                        </div>
-                    </div>
-                    <div class="row -translate-x-1/5 w-full flex items-center gap-10 whitespace-nowrap">
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">empathetic</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">useful</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png" alt="">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">functional</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">intuitive</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">inclusive</h2>
-                        </div>
-                    </div>
-                    <div class="row -translate-x-3/5 w-full flex items-center gap-10 whitespace-nowrap">
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">empathetic</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">useful</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png" alt="">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">elegant</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">intuitive</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">authentic</h2>
-                            <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
-                                <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png" alt="image">
-                            </div>
-                        </div>
-                        <div class="element flex items-center gap-10">
-                            <h2 class="machina font-[600] text-7xl">inclusive</h2>
-                        </div>
-                    </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">useful</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png"
+                    alt=""
+                  />
                 </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">intuitive</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">elegant</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">inclusive</h2>
+              </div>
+            </div>
+            <div
+              class="row -translate-x-1/3 w-full flex items-center gap-10 whitespace-nowrap"
+            >
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">thoughtful</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">empathetic</h2>
+                <div
+                  class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">elegant</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">bold</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">inclusive</h2>
+              </div>
+            </div>
+            <div
+              class="row -translate-x-1/5 w-full flex items-center gap-10 whitespace-nowrap"
+            >
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">empathetic</h2>
+                <div
+                  class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">useful</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">functional</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">intuitive</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">inclusive</h2>
+              </div>
+            </div>
+            <div
+              class="row -translate-x-3/5 w-full flex items-center gap-10 whitespace-nowrap"
+            >
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">empathetic</h2>
+                <div
+                  class="imgdiv w-[3.5rem] h-[3.5em] rounded-full overflow-hidden"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483184_Ellipse%20845.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">useful</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d348317a_Ellipse%20845-10.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">elegant</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">intuitive</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483185_Ellipse%20844.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">authentic</h2>
+                <div class="imgdiv w-[3.5rem] h-[3.5em] rounded-full">
+                  <img
+                    class="w-full h-full object-cover"
+                    src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483183_Ellipse%20845-6.png"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="element flex items-center gap-10">
+                <h2 class="machina font-[600] text-7xl">inclusive</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- craft section -->
+      <div
+        class="craft w-full min-h-screen px-15 flex justify-between items-start relative mt-28 gap-10"
+      >
+        <div class="l-text max-w-[40%] sticky top-0 left-0 py-10">
+          <p class="text-lg tracking-wide leading-8">
+            Significo is a leading health software creator founded on the belief
+            that technology can transform healthcare to put people first.
+            Whether they are employees, members, customers, or clients, we never
+            forget the real people we’re designing for.
+          </p>
+          <h2 class="machina text-[4rem] mt-10 leading-18 tracking-wide">
+            We Craft Human-Centric Health Software
+          </h2>
+          <div class="px-10 py-4 border-1 w-fit mt-8 cursor-pointer">
+            <div class="masker">
+              <span
+                class="inline-block text-[0.9rem] font-semibold uppercase tracking-wider"
+                >Our Solutions</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="r-cards w-[50%] py-10">
+          <p class="text-4xl">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Perspiciatis similique suscipit, saepe commodi doloremque
+            consequuntur rem veniam optio mollitia distinctio, doloribus nam?
+            Alias est pariatur a saepe eligendi animi enim, rerum iusto odio
+            iste ad molestias eveniet repellat harum delectus quasi? Sequi
+            tempore voluptas fugiat inventore optio asperiores nam facere
+            voluptatum adipisci delectus? Minima earum error molestias
+            laboriosam blanditiis, enim quis iste expedita delectus itaque at
+            nemo eius aut sapiente laborum alias. Dignissimos similique rem
+            consequuntur facere recusandae nisi voluptates at nemo nam tenetur?
+            Aut delectus ea ut laudantium porro? Mollitia quaerat architecto vel
+            facere non quidem labore natus ex ab, temporibus neque corporis odit
+            in necessitatibus eveniet hic ad placeat nulla accusamus. Recusandae
+            quasi incidunt deserunt ullam similique voluptas nulla! Veritatis
+            provident sunt, cupiditate atque omnis esse nam voluptates minima
+            laudantium, iusto voluptatum sit amet, modi necessitatibus culpa
+            aliquam itaque nisi expedita quos laboriosam voluptas repellat
+            laborum. Reiciendis, commodi itaque id tempore eaque nihil nostrum
+            pariatur voluptates minus unde similique tempora veniam, non vel,
+            aut eveniet voluptas ipsum molestias quo accusantium! Debitis
+            doloribus assumenda tempore atque porro officia sit perspiciatis
+            dolores. Neque reprehenderit impedit magni quia rem nam laboriosam
+            error, harum reiciendis doloremque animi deserunt corrupti eaque
+            veniam deleniti.
+          </p>
+        </div>
+      </div>
+      <!-- slider div -->
+      <div class="sliderdiv w-full relative">
+        <div class="w-full relative">
+          <div
+            class="slides overflow-hidden w-full sticky top-0 left-0 h-screen flex gap-5 relative"
+          >
+            <div
+              class="slide w-full h-screen flex-shrink-0 flex justify-center items-center"
+            >
+              <div class="text-box">
+                <h2 class="text-8xl machina">Real Talk,</h2>
+                <h2 class="text-8xl machina">Real Impact</h2>
+              </div>
+              <div
+                class="imagediv w-[18rem] h-[18rem] rounded-full overflow-hidden absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b1_horizontal%20imgs%2001.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="slide w-full h-screen flex-shrink-0 flex justify-center items-center relative"
+            >
+              <div class="w-[50%] text-center">
+                <div
+                  class="floating-text max-w-68 absolute left-[27%] top-[27%] -translate-x-1/3 text-justify"
+                >
+                  <p class="text-lg font-medium">
+                    We’re on a mission to impact as many lives as possible and
+                    build a better company while we do it.
+                  </p>
+                  <p class="text-lg font-medium">Here’s our progress.</p>
+                </div>
+                <h2 class="text-9xl machina font-semibold text-white">20.4M</h2>
+                <p
+                  class="text-4xl font-semibold machina tracking-wider leading-12"
+                >
+                  Real people — real lives — we have built products and
+                  solutions for.
+                </p>
+              </div>
+              <div
+                class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-0 right-1/2 translate-x-1/2 -translate-y-2/7"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483177_horizontal%20imgs%2004.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[10rem] h-[10rem] rounded-full overflow-hidden absolute bottom-[8%] left-1/4 translate-x-1/7 -translate-y-2/5"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483174_horizontal%20imgs%2003.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute bottom-0 right-2/5 translate-x-1/2 translate-y-2/5"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b0_horizontal%20imgs%2002.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-1/2 right-8 translate-x-1/2 -translate-y-1/2"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b6_horizontal%20imgs%2005.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="slide w-full h-screen flex-shrink-0 flex justify-center items-center relative"
+            >
+              <div class="w-[50%] text-center">
+                <div
+                  class="floating-text max-w-68 absolute left-[23%] top-[27%] -translate-x-1/3 text-left"
+                >
+                  <p class="text-lg font-medium">
+                    Our team is global and diverse, because our individual
+                    experiences make us stronger.
+                  </p>
+                </div>
+                <h2 class="text-9xl machina font-semibold text-white">43%</h2>
+                <p
+                  class="text-4xl font-semibold machina tracking-wider leading-12"
+                >
+                  Expert Women in Tech.
+                </p>
+              </div>
+              <div
+                class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/6"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483178_horizontal%20imgs%2008.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[22rem] h-[22rem] rounded-full overflow-hidden absolute bottom-20 left-1/3 -translate-x-1/2 translate-y-2/5"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b2_horizontal%20imgs%2006.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-1/2 right-8 translate-x-1/3 -translate-y-1/5"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b4_horizontal%20imgs%2007.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div
+              class="slide w-full h-screen flex-shrink-0 flex justify-center items-center relative overflow-hidden"
+            >
+              <div class="w-[50%] text-center">
+                <h2 class="text-9xl machina font-semibold text-white">13</h2>
+                <p
+                  class="text-4xl font-semibold machina tracking-wider leading-12"
+                >
+                  Nationalities Represented on Our Team.
+                </p>
+              </div>
+              <div
+                class="imagediv w-[14rem] h-[14rem] rounded-full overflow-hidden absolute top-0 right-2/3 translate-x-1/7 -translate-y-1/6"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483175_horizontal%20imgs%2010.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[25rem] h-[25rem] rounded-full overflow-hidden absolute bottom-1 left-[22%] -translate-x-1/2 translate-y-3/5"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b3_horizontal%20imgs%2009.webp"
+                  alt=""
+                />
+              </div>
+              <div
+                class="imagediv w-[23rem] h-[23rem] rounded-full overflow-hidden absolute top-0 right-6 translate-x-1/3 -translate-y-1/5"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b5_horizontal%20imgs%2012.webp"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-[10%] left-[4%] z-[5] w-fit px-7 py-4 border-1 bg-[#f5f19c] flex justify-between items-center cursor-pointer gap-3"
+          >
+            <h1
+              class="inline-block text-[0.9rem] text-black font-bold uppercase tracking-wider"
+            >
+              Partner with us
+            </h1>
+            <h2 class="text-black font-semibold">-></h2>
+          </div>
+        </div>
+      </div>
+      <!-- animated text -->
+      <div class="w-full py-50 flex flex-col gap-10">
+        <div class="w-full px-30 flex justify-start items-center">
+          <div class="paragraph w-[45%] flex flex-col justify-center items-end gap-10">
+            <p class="text-[1.6rem] text-[#2544ee] text-center tracking-wider">
+              Working with the Significo team has been such a pleasure! We took
+              on a significant project to rebuild our entire platform and the
+              team approached the project with our best interests in mind. They
+              continue to prioritize the end user experience and offer amazing
+              expertise in all of the areas we lack internally. I would
+              personally be lost without this team, their ability to problem
+              solve, their openness to feedback and desire to build the product
+              like it is their own.
+            </p>
+            <div class="w-full flex flex-col justify-center items-center">
+                <div class="imgdiv h-24 w-24 rounded-full overflow-hidden">
+                    <img class="w-full h-full object-cover"" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d34832e5_MirandaErnst.jpeg" alt="">
+                </div>
+                <div class="flex flex-col items-center gap-4 mt-6">
+                    <h3 class="text-[1.5rem]">Miranda Ernst</h3>
+                    <h4 class="text-[#7f7f7f] text-[1.1rem]">Product Manager @ HealthCheck360</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-30 flex justify-end items-center">
+            <div class="paragraph w-[42%] flex flex-col justify-center items-end gap-10">
+                <p class="text-[1.6rem] text-[#2544ee] text-center tracking-wider">
+                Working with Significo and their recommendation service has been a
+                game-changer for our occupational prevention efforts. Our
+                customers are extremely satisfied with the tool's impressive
+                technical capabilities and data-driven approach. But what truly
+                sets it apart is the intuitive and modern user experience it
+                offers, making it a breeze for our clients to navigate. By
+                leveraging this service, our customers have successfully tackled
+                presenteeism and absenteeism, making a significant impact on their
+                workforce's well-being. We highly recommend Significo to any
+                organization looking to optimize their occupational health and
+                drive positive change.
+                </p>
+                <div class="w-full flex flex-col justify-center items-center">
+                <div class="imgdiv h-24 w-24 rounded-full overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d3483253_EmekAltun.jpg" alt="">
+                </div>
+                <div class="flex flex-col items-center gap-4 mt-6">
+                    <h3 class="text-[1.5rem]">Miranda Ernst</h3>
+                    <h4 class="text-[#7f7f7f] text-[1.1rem]">CEO @ Vitaservices</h4>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- team div -->
+      <div class="team w-full pt-10 pb-20">
+        <h2 class="text-center text-6xl machina">Our Team</h2>
+        <div class="teamMembersList w-full mt-20 px-12">
+          <div class="listelem w-full py-9 px-10 border-b-1 relative">
+            <div
+              class="textdiv flex justify-between items-center relative z-[4]"
+            >
+              <div class="left flex items-center gap-12">
+                <h3 class="machina text-[2.7rem] text-[#d9d9d9]">01</h3>
+                <h3 class="machina text-[2.7rem]">Dr. Rick McCartney</h3>
+              </div>
+              <h3 class="text-[1.3rem]">CEO</h3>
+            </div>
+            <div
+              class="picturediv hidden w-[16rem] h-[16rem] rounded-full overflow-hidden absolute z-[6] bg-red-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d3483259_Rick%20McCartney%20.png" alt="" />
+            </div>
+            <div
+              class="blue-layer w-full h-[0%] absolute bg-[#2544ee] bottom-0 left-0 z-[3]"
+            ></div>
+          </div>
+          <div class="listelem w-full py-9 px-10 border-b-1 relative">
+            <div
+              class="textdiv flex justify-between items-center relative z-[4]"
+            >
+              <div class="left flex items-center gap-12">
+                <h3 class="machina text-[2.7rem] text-[#d9d9d9]">02</h3>
+                <h3 class="machina text-[2.7rem]">Chris Koha</h3>
+              </div>
+              <h3 class="text-[1.3rem]">COO</h3>
+            </div>
+            <div
+              class="picturediv hidden w-[16rem] h-[16rem] rounded-full overflow-hidden absolute z-[6] bg-red-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d34832ae_655d505c9d551c9c11dd3613_Chris20Koha.png" alt="" />
+            </div>
+            <div
+              class="blue-layer w-full h-[0%] absolute bg-[#2544ee] bottom-0 left-0 z-[3]"
+            ></div>
+          </div>
+          <div class="listelem w-full py-9 px-10 border-b-1 relative">
+            <div
+              class="textdiv flex justify-between items-center relative z-[4]"
+            >
+              <div class="left flex items-center gap-12">
+                <h3 class="machina text-[2.7rem] text-[#d9d9d9]">03</h3>
+                <h3 class="machina text-[2.7rem]">Caroline Nieto</h3>
+              </div>
+              <h3 class="text-[1.3rem]">Chief Product officer</h3>
+            </div>
+            <div
+              class="picturediv hidden w-[16rem] h-[16rem] rounded-full overflow-hidden absolute z-[6] bg-red-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d3483297_655d5077c62c03c26afcfff2_Caroline20Nieto.png" alt="" />
+            </div>
+            <div
+              class="blue-layer w-full h-[0%] absolute bg-[#2544ee] bottom-0 left-0 z-[3]"
+            ></div>
+          </div>
+          <div class="listelem w-full py-9 px-10 border-b-1 relative">
+            <div
+              class="textdiv flex justify-between items-center relative z-[4]"
+            >
+              <div class="left flex items-center gap-12">
+                <h3 class="machina text-[2.7rem] text-[#d9d9d9]">04</h3>
+                <h3 class="machina text-[2.7rem]">Victor Albertos</h3>
+              </div>
+              <h3 class="text-[1.3rem]">CTO</h3>
+            </div>
+            <div
+              class="picturediv hidden w-[16rem] h-[16rem] rounded-full overflow-hidden absolute z-[6] bg-red-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d34832e6_655d504bfd0e67e20640dbbd_ViCC81ctor20Albertos.png" alt="" />
+            </div>
+            <div
+              class="blue-layer w-full h-[0%] absolute bg-[#2544ee] bottom-0 left-0 z-[3]"
+            ></div>
+          </div>
+          <div class="listelem w-full py-9 px-10 relative">
+            <div
+              class="textdiv flex justify-between items-center relative z-[4]"
+            >
+              <div class="left flex items-center gap-12">
+                <h3 class="machina text-[2.7rem] text-[#d9d9d9]">05</h3>
+                <h3 class="machina text-[2.7rem]">Adrian Rubio</h3>
+              </div>
+              <h3 class="text-[1.3rem]">VP of Engineering</h3>
+            </div>
+            <div
+              class="picturediv hidden w-[16rem] h-[16rem] rounded-full overflow-hidden absolute z-[6] bg-red-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/659dbdfd5a080be8d348325c_655d50b27e70d440e4404528_AdriaCC81n20Rubio.png" alt="" />
+            </div>
+            <div
+              class="blue-layer w-full h-[0%] absolute bg-[#2544ee] bottom-0 left-0 z-[3]"
+            ></div>
+          </div>
+        </div>
+        <div class="w-full btndiv flex justify-center items-center my-5">
+            <div class="w-fit px-7 py-4 border-1 bg-[#f5f19c] flex justify-between items-center gap-3 cursor-pointer">
+                <h1 class="text-[0.9rem] text-black font-bold uppercase tracking-wider">
+                    Meet the entire team
+                </h1>
+                <h2 class="text-black font-semibold">-></h2>
             </div>
         </div>
-        <!-- craft section -->
-        <div class="craft w-full min-h-screen px-15 flex justify-between items-start relative mt-28 gap-10">
-            <div class="l-text max-w-[40%] sticky top-0 left-0 py-10">
-                <p class="text-lg">Significo is a leading health software creator founded on the belief that technology can transform healthcare to put people first. Whether they are employees, members, customers, or clients, we never forget the real people we’re designing for.</p>
-                <h2 class="machina text-[4rem] mt-10 leading-18">We Craft Human-Centric Health Software</h2>
-                <div class="px-10 py-4 border-1 w-fit mt-8">
-                    <div class="masker">
-                        <span class="inline-block text-[1rem] font-medium uppercase">Our Solutions</span>
-                    </div>
-                </div>
-            </div>
-            <div class="r-cards w-[50%] py-10">
-                <p class="text-4xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis similique suscipit, saepe commodi doloremque consequuntur rem veniam optio mollitia distinctio, doloribus nam? Alias est pariatur a saepe eligendi animi enim, rerum iusto odio iste ad molestias eveniet repellat harum delectus quasi? Sequi tempore voluptas fugiat inventore optio asperiores nam facere voluptatum adipisci delectus? Minima earum error molestias laboriosam blanditiis, enim quis iste expedita delectus itaque at nemo eius aut sapiente laborum alias. Dignissimos similique rem consequuntur facere recusandae nisi voluptates at nemo nam tenetur? Aut delectus ea ut laudantium porro? Mollitia quaerat architecto vel facere non quidem labore natus ex ab, temporibus neque corporis odit in necessitatibus eveniet hic ad placeat nulla accusamus. Recusandae quasi incidunt deserunt ullam similique voluptas nulla! Veritatis provident sunt, cupiditate atque omnis esse nam voluptates minima laudantium, iusto voluptatum sit amet, modi necessitatibus culpa aliquam itaque nisi expedita quos laboriosam voluptas repellat laborum. Reiciendis, commodi itaque id tempore eaque nihil nostrum pariatur voluptates minus unde similique tempora veniam, non vel, aut eveniet voluptas ipsum molestias quo accusantium! Debitis doloribus assumenda tempore atque porro officia sit perspiciatis dolores. Neque reprehenderit impedit magni quia rem nam laboriosam error, harum reiciendis doloremque animi deserunt corrupti eaque veniam deleniti.</p>
-            </div>
-        </div>
-        <!-- slider div -->
-        <div class="sliderdiv w-full relative">
-            <div class="w-full relative">
-                <div class="slides w-full sticky top-0 left-0 h-screen flex gap-5 relative">
-                    <div class="slide w-full h-screen flex-shrink-0 flex justify-center items-center">
-                        <div class="text-box">
-                            <h2 class="text-8xl machina">Real Talk,</h2>
-                            <h2 class="text-8xl machina">Real Impact</h2>
-                        </div>
-                        <div class="imagediv w-[18rem] h-[18rem] rounded-full overflow-hidden absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b1_horizontal%20imgs%2001.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="slide w-full h-screen flex-shrink-0 flex justify-center items-center relative">
-                        <div class="w-[50%] text-center">
-                            <div class="floating-text max-w-68 absolute left-[27%] top-[27%] -translate-x-1/3 text-justify">
-                                <p class="text-lg font-medium">We’re on a mission to impact as many lives as possible and build a better company while we do it.</p>
-                                <p class="text-lg font-medium">Here’s our progress.</p>
-                            </div>
-                            <h2 class="text-9xl machina font-semibold text-white">20.4M</h2>
-                            <p class="text-4xl font-semibold machina tracking-wider leading-12">Real people — real lives — we have built products and solutions for.</p>
-                        </div>
-                        <div class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-0 right-1/2 translate-x-1/2 -translate-y-2/7">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483177_horizontal%20imgs%2004.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[10rem] h-[10rem] rounded-full overflow-hidden absolute bottom-[8%] left-1/4 translate-x-1/7 -translate-y-2/5">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483174_horizontal%20imgs%2003.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute bottom-0 right-2/5 translate-x-1/2 translate-y-2/5">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b0_horizontal%20imgs%2002.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-1/2 right-8 translate-x-1/2 -translate-y-1/2">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b6_horizontal%20imgs%2005.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="slide w-full h-screen flex-shrink-0 flex justify-center items-center relative">
-                        <div class="w-[50%] text-center">
-                            <div class="floating-text max-w-68 absolute left-[23%] top-[27%] -translate-x-1/3 text-left">
-                                <p class="text-lg font-medium">Our team is global and diverse, because our individual experiences make us stronger.</p>
-                            </div>
-                            <h2 class="text-9xl machina font-semibold text-white">43%</h2>
-                            <p class="text-4xl font-semibold machina tracking-wider leading-12">Expert Women in Tech.</p>
-                        </div>
-                        <div class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/6">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483178_horizontal%20imgs%2008.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[22rem] h-[22rem] rounded-full overflow-hidden absolute bottom-20 left-1/3 -translate-x-1/2 translate-y-2/5">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b2_horizontal%20imgs%2006.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[16rem] h-[16rem] rounded-full overflow-hidden absolute top-1/2 right-8 translate-x-1/3 -translate-y-1/5">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b4_horizontal%20imgs%2007.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="slide w-full h-screen flex-shrink-0 flex justify-center items-center relative overflow-hidden">
-                        <div class="w-[50%] text-center">
-                            <h2 class="text-9xl machina font-semibold text-white">13</h2>
-                            <p class="text-4xl font-semibold machina tracking-wider leading-12">Nationalities Represented on Our Team.</p>
-                        </div>
-                        <div class="imagediv w-[14rem] h-[14rem] rounded-full overflow-hidden absolute top-0 right-2/3 translate-x-1/7 -translate-y-1/6">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d3483175_horizontal%20imgs%2010.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[25rem] h-[25rem] rounded-full overflow-hidden absolute bottom-1 left-[22%] -translate-x-1/2 translate-y-3/5">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b3_horizontal%20imgs%2009.webp" alt="">
-                        </div>
-                        <div class="imagediv w-[23rem] h-[23rem] rounded-full overflow-hidden absolute top-0 right-6 translate-x-1/3 -translate-y-1/5">
-                            <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483164/659dbdfd5a080be8d34831b5_horizontal%20imgs%2012.webp" alt="">
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="absolute bottom-[5%] left-[4%] sticky z-[5] w-fit px-10 py-4 border-1">
-                    <h1>Partner with us</h1>
-                </div> -->
-            </div>
-        </div>
+      </div>
     </div>
-    
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
