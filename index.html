@@ -9,10 +9,20 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body theme="dark">
-    <div class="main w-full">
+
+    <!-- for small devices -->
+    <div class="small-device w-full h-screen overflow-hidden md:hidden ">
+      <div class="w-full h-full flex flex-col gap-4 justify-center items-center px-4">
+        <h1 class="text-5xl font-semibold machina">Significo</h1>
+         <p class="text-center text-sm tracking-wide">Please open this website on a device with a larger screen for the best experience.</p>
+      </div>
+    </div>
+
+    <!-- for big screens -->
+    <div class="main w-full hidden md:block">
       <!-- navbar -->
       <div
-        class="navbar w-full fixed z-[50] top-0 flex justify-between items-center pt-10 px-12"
+        class="navbar w-full fixed z-[50] top-0 flex justify-between items-center pt-7 px-12"
       >
         <div class="leftnav">
           <h1 class="text-[2.2rem]">significo</h1>
@@ -32,8 +42,8 @@
         </div>
       </div>
       <!-- hero section -->
-      <div class="home w-full h-screen relative mt-7">
-        <div class="bottomtext z-[5] w-40 absolute bottom-[10%] left-[4%]">
+      <div class="home w-full h-screen relative">
+        <div class="bottomtext z-[5] w-44 absolute bottom-[10%] left-[4%]">
           <h4 class="text-sm font-medium">
             We build big ideas. Software. Apps. Tools.
           </h4>
@@ -41,20 +51,20 @@
         </div>
         <!-- video div -->
         <div
-          class="hidden videodiv z-[3] w-full h-screen absolute top-0 left-0 overflow-hidden"
+          class="hidden videodiv z-[3] w-full h-full absolute top-0 left-0 overflow-hidden"
         >
           <video
             autoplay
             loop
             muted
-            class="absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            class="absolute object-cover w-full h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
             src="https://xgjzloifyvgpbmyonaya.supabase.co/storage/v1/object/public/files/bBj1XfrSyi/1ENIoa5sjq"
           ></video>
         </div>
         <!-- marquee div -->
         <div class="marqueesdiv w-full h-screen relative overflow-hidden">
           <div
-            class="heading absolute top-[10%] left-1/2 -translate-x-1/2 w-[20rem]"
+            class="heading absolute top-[12%] left-1/2 -translate-x-1/2 w-[20rem]"
           >
             <h1 class="text-[1.5rem] tracking-wide text-center">
               Crafting a new paradigm of healthcare, one that is
@@ -684,8 +694,8 @@
             </div>
         </div>
         <div class="right w-[calc(100%-30%)] flex justify-center gap-10">
-            <div class="capsule1 w-88 h-[50rem] rounded-full border-1 p-8 overflow-hidden flex flex-col items-center gap-12">
-                <div class="capsule-img-div w-[19rem] h-[19rem] rounded-full overflow-hidden">
+            <div class="capsule1 w-88 rounded-full border-1 p-8 overflow-hidden flex flex-col items-center gap-12">
+                <div class="capsule-img-div w-[20vw] h-[20vw] rounded-full overflow-hidden">
                     <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/68406c4fac2acfa27649dbfe_digital-therapeutics.jpg" alt="">
                 </div>
                 <div class="capsule-text flex flex-col gap-4">
@@ -696,7 +706,7 @@
                     <h4 class="machina font-semibold text-[1.1rem]">Thought Leadership</h4>
                 </div>
             </div>
-            <div class="capsule2 w-88 h-[50rem] rounded-full border-1 p-8 overflow-hidden flex flex-col justify-end items-center gap-10">
+            <div class="capsule2 w-88 rounded-full border-1 p-8 overflow-hidden flex flex-col justify-end items-center gap-10">
                 <div class="capsult-btn w-fit bg-[#e9bbff] py-2 px-3 rounded-full">
                     <h4 class="machina font-semibold text-[1.1rem]">Thought Leadership</h4>
                 </div>
@@ -704,7 +714,7 @@
                     <h3 class="machina text-2xl font-semibold text-center">AI-Leadership Coaching to make work a healthier and happier place</h3>
                     <p class="text-[0.9rem] text-center machina">Bunch meefs people in the sitting where they spend half of their waking hours: work, with action-oriented, 2-minutes daily tips, personalized and adaptive using AI</p>
                 </div>
-                <div class="capsule-img-div w-[19rem] h-[19rem] rounded-full overflow-hidden">
+                <div class="capsule-img-div w-[20vw] h-[20vw] rounded-full overflow-hidden">
                     <img class="w-full h-full object-cover" src="https://cdn.prod.website-files.com/659dbdfd5a080be8d3483190/681ccfe12a3e6b1c7de99357_67d86e45e598770807a15d27_Rectangle%25201.png" alt="">
                 </div>
             </div>
@@ -743,7 +753,7 @@
         </div>
         <div class="footer-bottom w-full flex flex-col">
             <div class="w-full footer-text relative flex flex-col justify-center items-center overflow-hidden">
-                <h1 class="text-[21rem]">significo<h1>
+                <h1 class="text-[22vw]">significo<h1>
                 <div class="black-overlay w-full bg-black h-[34%] absolute bottom-0 left-1/2 -translate-x-1/2 border-t-1 flex justify-between items-center">
                     <div class="flex gap-8">
                         <h5 class="text-xs spaced-underline">Privacy Policy</h5>
