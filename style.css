@@ -71,3 +71,7 @@ input[type="email"]{
 .icons i{
     font-size: 1.3rem;
 }
+
+.videodiv{
+    clip-path: circle(var(--clip) at center);
+}
