@@ -29,17 +29,30 @@ tl.to(".videodiv", {
 }, "b")
 }
 
-
-gsap.to(".slide", {
+function slidesAnimation() {
+    gsap.to(".slide", {
     scrollTrigger: {
         trigger: ".sliderdiv",
         start: "top top",
-        end: "bottom bottom",
-        scrub: 3,
+        end: "bottom top",
+        pin: true,
+        scrub: 1,
     },
     xPercent: -300,
-    ease: Power4
+    ease: Power2
+})
+}
+
+document.querySelectorAll(".listelem").forEach(function(elem){
+    elem.addEventListener("mousemove", function(){
+        gsap.to(this.querySelector(".picturediv"),{
+            opacity: 1,
+            ease: power4,
+            duration: .5
+        })
+    })
 })
 
 
 homepageAnimation();
+slidesAnimation();
